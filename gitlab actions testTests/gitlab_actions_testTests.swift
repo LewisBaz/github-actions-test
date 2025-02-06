@@ -14,6 +14,8 @@ final class gitlab_actions_testTests: XCTestCase {
         let calculator = Calculator()
         let result = calculator.simpleOperation(1, 2, +)
         XCTAssertEqual(result, 3)
+        let result2 = calculator.simpleOperation(2, 3, +)
+        XCTAssertEqual(result2, 5)
     }
 
     func testCalculatorSubstraction() {
