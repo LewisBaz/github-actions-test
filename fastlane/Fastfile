@@ -13,7 +13,7 @@ platform :ios do
     devices: ["iPhone 15"], 
     fail_build: true,
     skip_build: true,
-    xcargs: "-destination 'platform=macOS'"
+    xcargs: "CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO -destination 'platform=macOS'"
   )
   end
 end
