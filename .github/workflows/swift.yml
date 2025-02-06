@@ -1,0 +1,35 @@
+name: iOS Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  tests:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1  # Версия Ruby, которую использует Fastlane
+
+      - name: Install Bundler
+        run: gem install bundler
+
+      - name: Install dependencies
+        run: bundle install
+        working-directory: ios  # Укажи путь, если у тебя Fastlane не в корне проекта
+
+      - name: Install Fastlane
+        run: bundle exec fastlane --version
+
+      - name: Run tests
+        run: bundle exec fastlane test
