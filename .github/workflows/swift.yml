@@ -6,7 +6,7 @@ on:
       - master
   pull_request:
     branches:
-      - master
+      - master 
 
 jobs:
   tests:
@@ -16,16 +16,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Clean Derived Data
-        run: xcrun simctl shutdown all && rm -rf ~/Library/Developer/Xcode/DerivedData/*
-
-      - name: List available simulators
-        run: xcrun simctl list devices
-
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1.0 
+          ruby-version: 3.1
 
       - name: Install Bundler
         run: gem install bundler
