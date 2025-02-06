@@ -30,6 +30,12 @@ jobs:
       - name: Install Fastlane
         run: bundle exec fastlane --version
 
+      - name: List available simulators
+        run: xcrun simctl list devices
+
+      - name: Check Xcode Version
+        run: xcodebuild -version
+
       - name: Boot iPhone 15 Simulator
         run: xcrun simctl boot "iPhone 15" || echo "Simulator already booted"
 
