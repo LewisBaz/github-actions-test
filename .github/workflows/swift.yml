@@ -3,10 +3,10 @@ name: iOS Tests
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   tests:
@@ -26,7 +26,6 @@ jobs:
 
       - name: Install dependencies
         run: bundle install
-        working-directory: ios  # Укажи путь, если у тебя Fastlane не в корне проекта
 
       - name: Install Fastlane
         run: bundle exec fastlane --version
