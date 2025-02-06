@@ -35,7 +35,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6.10  # Версия Ruby, которую использует Fastlane
+          ruby-version: 3.1.0  # Версия Ruby, которую использует Fastlane
 
       - name: Install Bundler
         run: gem install bundler
