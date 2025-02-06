@@ -19,6 +19,9 @@ jobs:
       - name: Clean Derived Data
         run: xcrun simctl shutdown all && rm -rf ~/Library/Developer/Xcode/DerivedData/*
 
+      - name: List available simulators
+        run: xcrun simctl list devices
+
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
