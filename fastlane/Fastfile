@@ -12,8 +12,8 @@ platform :ios do
     clean: false,               
     devices: ["iPhone 15"], 
     fail_build: true,
-    skip_build: true, 
-    xcargs: "-parallel-testing-enabled YES"    
+    skip_build: true,
+    xcargs: "-destination 'platform=macOS'"
   )
   end
 end
