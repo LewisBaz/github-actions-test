@@ -47,5 +47,5 @@ jobs:
         run: bundle exec fastlane --version
 
       - name: Run unit tests without simulator
-        run: bundle exec fastlane test --xcargs="-destination 'platform=macOS'"
+        run: bundle exec fastlane test
 
