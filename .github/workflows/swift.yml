@@ -16,11 +16,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Xcode
-        uses: macos-setup-action@v2
-        with:
-          xcode-version: '14.2' 
-
       # - name: Cache Bundler dependencies
       #   uses: actions/cache@v3
       #   with:
