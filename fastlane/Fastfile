@@ -5,8 +5,7 @@ platform :ios do
   lane :test do
     scan(
       scheme: "gitlab actions testTests", 
-      clean: true,
-      destination: "platform=iOS Simulator,name=iPhone 15,OS=17.0"
+      clean: true
     )
   end
 end
