@@ -16,21 +16,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # - name: Cache Bundler dependencies
-      #   uses: actions/cache@v3
-      #   with:
-      #     path: vendor/bundle
-      #     key: ${{ runner.os }}-bundler-${{ hashFiles('**/Gemfile.lock') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-bundler-
-
-      # - name: Cache DerivedData
-      #   uses: actions/cache@v3
-      #   with:
-      #     path: ~/Library/Developer/Xcode/DerivedData
-      #     key: ${{ runner.os }}-deriveddata-${{ github.sha }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-deriveddata-
+      - name: Clean Derived Data
+        run: xcrun simctl shutdown all && rm -rf ~/Library/Developer/Xcode/DerivedData/*
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
