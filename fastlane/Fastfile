@@ -10,10 +10,7 @@ platform :ios do
   scan(
     scheme: "gitlab_actions_testTests", 
     clean: false,               
-    devices: ["iPhone 15"], 
-    fail_build: true,
-    skip_build: true,
-    ## xcargs: "CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO -destination 'platform=iOS'"
+    devices: ["iPhone 15"]
   )
   end
 end
